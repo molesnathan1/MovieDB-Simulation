@@ -29,19 +29,19 @@ The Verifier program is an intermediary between the other programs which create 
 The ResetDB program simply wipes the tables from the database, which removes all of the currently populated data. Similarly, the CreateDB program builds the database tables. These are each called once by Setup and are otherwise used as standalone programs.
 
 ## Semantic constraints enforced in the programs
-### Setup.py:
+#### Setup.py
 To run the program three parameters, which act as constraints, are required: the number of threads, the number of users created per thread, and the number of actions each user does.
 
-### GeneralUser.py:
+#### GeneralUser.py
 General Users are constrained to commenting on reviews and answering surveys that they were requested to take. If there are no surveys that they were invited to complete then they must comment on a review.
 
-### HiredCritic.py:
+#### HiredCritic.py
 Hired Critics are constrained to requesting a user to take a survey, requesting a user to comment on a review, writing a comment on a review, creating a survey, and writing a review. Explanations of movie reviews are constrained to 6 pre-written strings that are chosen based on the random ratings out of 10 on particulars about the movie. Comments and questions are randomly selected from a list of pre-written strings. They also only invite another user to comment on their review or take their survey if they have written a review or created a survey, respectively.
 
-### UserCritic.py:
+#### UserCritic.py
 User Critics are constrained to reviewing a movie, creating a survey, taking a survey, and responding to a comment or survey request. Explanations of movie reviews are constrained to 6 pre-written strings that are chosen based on the random ratings out of 10 on particulars about the movie. Comments and questions are randomly selected from a list of pre-written strings.
 
-### UserSpawner.py:
+#### UserSpawner.py
 A user will be exactly one of: Hired Critic, User Critic, or General User. Additionally, a username will be exactly 12 lowercase letters, randomly generated from the alphabet.
 
 ## Results/Conclusion
