@@ -1,5 +1,5 @@
 # Movie Database Simulation
-
+By Nathan Moles and Alex Miller
 ## Introduction
 In this project, we created a database and a set of programs to interact with it. The purpose of the project was to simulate the database management system (PostgreSQL) responding to many simultaneous requests to an IMDB-esque database. The programs represented different users who chose to interact with the information in the database. The accuracy and responsiveness of the database were tested against a multi-threaded implementation of the programs.
 
